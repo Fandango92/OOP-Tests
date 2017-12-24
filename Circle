@@ -40,10 +40,22 @@ public class Circle extends JFrame
     public void moveDiagonal(int direction)
     {
         if(direction == 1){
-            moveDown();
-            moveRight();
+            y = y + moveStep;
+            x = x + moveStep;
         }
-        
+        else if(direction == 2){
+            y = y - moveStep;
+            x = x + moveStep;
+        }
+        else if(direction == 3){
+            y = y - moveStep;
+            x = x - moveStep;
+        }
+        else if(direction == 4){
+            y = y + moveStep;
+            x = x - moveStep;
+        }
+        repaint();
         
     }
 
